@@ -7,9 +7,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: white;
-            color: black;
-            text-align: center;
+            background-color: black;
+            color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -19,12 +18,24 @@
             overflow: hidden;
             padding: 20px;
         }
-        .header {
+        .header, .footer {
             width: 100%;
             padding: 10px 0;
-            border-bottom: 2px solid black;
+            position: absolute;
+            left: 10px;
+            border-bottom: 2px solid;
             font-size: 24px;
             font-weight: bold;
+        }
+        .header {
+            top: 10px;
+        }
+        .footer {
+            bottom: 10px;
+            border-top: 2px solid;
+            border-bottom: none;
+            text-align: left;
+            font-size: 18px;
         }
         .container {
             display: flex;
@@ -102,11 +113,14 @@
     </style>
 </head>
 <body>
-    <div class="header">Who's On?</div>
+    <div class="header">Who's On? @ WHPK 88.5 FM</div>
     <div class="container">
         <div class="logo">LOGO</div>
-        <div class="info">Mondays @ 5 on WHPK 88.5FM<br>The show about student founders</div>
+        <div class="info">The show about student founders</div>
     </div>
+  
+
+  </div>
     <div class="scroll-container">
         <div class="guest-logos">
             <div class="guest-logo">Guest 1</div>
@@ -119,5 +133,7 @@
             <div class="guest-logo">Guest 4</div>
         </div>
     </div>
+    <div class="footer">
+      Phone: 774-312-3627 | Email: tchan0@uchicago.edu</div>
 </body>
 </html>
