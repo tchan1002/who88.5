@@ -1,139 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radio Show</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-            padding: 20px;
-        }
-        .header, .footer {
-            width: 100%;
-            padding: 10px 0;
-            position: absolute;
-            left: 10px;
-            border-bottom: 2px solid;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .header {
-            top: 10px;
-        }
-        .footer {
-            bottom: 10px;
-            border-top: 2px solid;
-            border-bottom: none;
-            text-align: left;
-            font-size: 18px;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        .logo {
-            width: 150px;
-            height: 150px;
-            background-color: grey;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        .info {
-            font-size: 18px;
-            text-align: center;
-            max-width: 90%;
-        }
-        .scroll-container {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            margin-top: 20px;
-        }
-        .guest-logos {
-            display: flex;
-            gap: 15px;
-            animation: scroll 10s linear infinite;
-        }
-        .guest-logo {
-            width: 80px;
-            height: 80px;
-            background-color: grey;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            font-size: 14px;
-        }
-        @keyframes scroll {
-            from {
-                transform: translateX(100%);
-            }
-            to {
-                transform: translateX(-100%);
-            }
-        }
-        @media (min-width: 600px) {
-            .container {
-                flex-direction: row;
-                justify-content: space-between;
-                width: 70%;
-            }
-            .logo {
-                width: 200px;
-                height: 200px;
-                font-size: 24px;
-            }
-            .info {
-                font-size: 20px;
-                max-width: 50%;
-                text-align: left;
-            }
-            .guest-logo {
-                width: 100px;
-                height: 100px;
-                font-size: 16px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="header">Who's On? @ WHPK 88.5 FM</div>
-    <div class="container">
-        <div class="logo">LOGO</div>
-        <div class="info">The show about student founders</div>
-    </div>
-  
+      body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: black;
+        height: 100vh;
+        padding: 20px;
+      }
 
-  </div>
-    <div class="scroll-container">
-        <div class="guest-logos">
-            <div class="guest-logo">Guest 1</div>
-            <div class="guest-logo">Guest 2</div>
-            <div class="guest-logo">Guest 3</div>
-            <div class="guest-logo">Guest 4</div>
-            <div class="guest-logo">Guest 1</div>
-            <div class="guest-logo">Guest 2</div>
-            <div class="guest-logo">Guest 3</div>
-            <div class="guest-logo">Guest 4</div>
-        </div>
+      .header {
+        height: 4vh;
+        width: 100vw;
+        padding: 10px 0;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        border-bottom: 2px solid black;
+        font-size: 24px; 
+        font-weight: bold;
+      }
+
+      
+      .footer {
+        position: absolute;
+        display: flex;
+        width: 100vw;
+        height: 10vh;
+        bottom: 10px;
+        left: 0px;
+        border-top: 2px solid;
+        border-bottom: none;
+        text-align: left;
+        font-size: 18px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+Who's On? @ WHPK 88.5 FM
     </div>
+   
     <div class="footer">
-      Phone: 774-312-3627 | Email: tchan0@uchicago.edu</div>
-</body>
+      Phone: 774-312-3627 | Email: tchan0@uchicago.edu
+  
+    </div>
+  </body>
 </html>
