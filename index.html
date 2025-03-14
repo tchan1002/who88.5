@@ -9,11 +9,11 @@
         font-family: Arial, sans-serif;
         background-color: white;
         color: black;
-        height: 100vh;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+       margin: 0;
       }
 
       .header {
@@ -28,6 +28,13 @@
         font-weight: bold;
         display: flex;
         justify-content: space-around;
+      }
+      
+      .drawing{
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
       }
 
       
@@ -45,12 +52,36 @@
       }
       
       .turntable{
-        position: relative;
-        height: 30vh;
-        width: 30vh;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        height: 70%;
+        width: 70%;
         background-color: black;
         border-radius: 100vh;
       }
+      
+      .arm{
+        position: absolute;
+        top: 10%;
+        left: 70%;
+        height: 20%;
+        width: 20%;
+        background-color: black;
+        border-radius: 100vh;
+      }
+      
+       .lever{
+        position: absolute;
+        top: 16%;
+        left: 77%;
+        height: 66%;
+        width: 4%;
+        background-color: white;
+        border: 5px solid black;
+        border-radius: 100vh;
+      }
+      
       
 
     </style>
@@ -62,8 +93,15 @@
 <div>Directory</div>  
     </div>
     
+    
+<div class="drawing">
     <div class="turntable">
-      
+    </div>
+    <div class="arm">
+    </div>
+  
+      <div class="lever">
+    </div>
     </div>
    
     <div class="footer">
