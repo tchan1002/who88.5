@@ -128,7 +128,7 @@
         height: 500px;
         min-width: 500px;
         min-height: 500px;
-        border: 2px solid black;
+/*         border: 2px solid black; */
         
       }
 
@@ -141,6 +141,24 @@
         background-color: black;
         border-radius: 100vh;
       }
+      
+       @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+         }}
+      
+      .drawing .dot {
+      position: absolute;
+      top: 20%;
+      left: 70%;
+      width: 8px;
+      height: 8px;
+      background-color: white;
+      border-radius: 50%;
+    }
 
       .drawing .hole {
         position: absolute;
@@ -166,12 +184,28 @@
         position: absolute;
         top: 16%;
         left: 77%;
-        height: 60%;
+        height: 50%;
         width: 4%;
         background-color: white;
         border: 5px solid black;
         border-radius: 100vh;
+        transform-origin: top;
+        transition: transform 0.5s ease-in-out;
       }
+      
+      
+      .drawing .play {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
       
       
       .footer {       
@@ -221,6 +255,7 @@
         border: 2px solid red;
       }
       
+      
     </style>
   </head>
   <body>
@@ -254,12 +289,19 @@
 
     <div class="drawing">
       <div class="turntable">
+        <div class="dot"></div>
         <div class="hole"> </div>
       </div>
       <div class="arm"> </div>
       <div class="lever"> </div>
+      <button class="play">Play</button>
     </div>
 
+<audio id="record-audio" loop>
+  <source src="hohey.mp3" type="audio/mpeg">
+</audio>
+    
+    
     <div class="footer">
       <div class="left-links">
      <div> Instagram </div>
@@ -279,4 +321,28 @@
       </div>
     </div>
   </body>
+  
+    <script>
+    const turntable = document.querySelector(".turntable");
+    const play = document.querySelector(".play");
+    const lever = document.querySelector(".lever");
+    const audio = document.getElementById("record-audio");
+    let spinning = true;
+    
+    play.addEventListener("click", () => {
+      if (spinning) {
+        turntable.style.animation = "none"; 
+        lever.style.transform = "rotate(0deg)"; 
+        audio.pause();
+        play.textContent = "Play";
+      } else {
+        turntable.style.animation = "spin 3s linear infinite"; 
+        lever.style.transform = "rotate(10deg)"; 
+        audio.play();
+        play.textContent = "Pause";
+      }
+      spinning = !spinning;
+    });
+  </script>
+  
 </html>
