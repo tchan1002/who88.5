@@ -14,7 +14,7 @@
         margin: 0;
       }
 
-/* Header */
+      /* Header */
       .header {
         position: relative;
         height: 4vh;
@@ -28,25 +28,25 @@
         justify-content: space-around;
         background-color: black;
         color: white;
-      
+
       }
-      
-        .header .left-links{
+
+      .header .left-links {
         display: flex;
         justify-content: space-between;
         align-content: center;
         width: 30%;
         position: absolute;
         left: 10%;
-/*         border: 2px solid red; */
+        /*         border: 2px solid red; */
       }
-      
-      .header .logo{
+
+      .header .logo {
         height: 2vh;
         width: 2vw;
       }
-      
-      .header .right-links{
+
+      .header .right-links {
         display: flex;
         justify-content: space-between;
         align-content: center;
@@ -54,7 +54,7 @@
         min-width: 300px;
         position: absolute;
         right: 10%;
-/*         border: 2px solid red; */
+        /*         border: 2px solid red; */
       }
 
       .container {
@@ -63,39 +63,41 @@
         height: 800px;
         border: 2px solid red;
         display: flex;
-        justify-items: center;
+        justify-content: center;
         align-items: center;
       }
-      
-/* episode card */
+
+
+
+      /* episode card */
       .episode {
         position: relative;
         width: 500px;
         height: 500px;
-        min-width: 500px;
-        min-height: 500px;
-/*         border: 2px solid black; */
+        min-width: 300px;
+        min-height: 300px;
+        /*         border: 2px solid black; */
         box-shadow: 5px 5px 10px 3px grey;
         border-radius: 2vh;
         margin: 15vh 5vh;
       }
-      
-      .episode .title{
+
+      .episode .title {
         position: absolute;
         font-size: 24px;
         font-weight: bold;
         top: 67%;
         margin: 2%;
       }
-      
-        .episode .description{
+
+      .episode .description {
         font-size: 18px;
         position: absolute;
         top: 75%;
         margin: 2%;
       }
-      
-      .episode .tagbox{
+
+      .episode .tagbox {
         position: absolute;
         width: 18%;
         height: 8%;
@@ -111,37 +113,36 @@
         color: white;
         background-color: green;
       }
-      
-      
-      .episode .showimage{
+
+
+      .episode .showimage {
         position: absolute;
-        width: 100%; 
+        width: 100%;
         height: 66%;
         background-color: black;
         border-radius: 1.2vh;
       }
-      
-       .episode .showimage img{
+
+      .episode .showimage img {
         position: absolute;
-        width: 95%; 
+        width: 95%;
         height: 95%;
         top: 2.5%;
         left: 2.5%;
         background-color: black;
         border-radius: 1vh;
       }
-    
-    /* turntable */
-      
-      
+
+      /* turntable */
+
       .drawing {
         position: relative;
         width: 500px;
         height: 500px;
         min-width: 500px;
         min-height: 500px;
-/*         border: 2px solid black; */
-        
+        /*         border: 2px solid black; */
+
       }
 
       .drawing .turntable {
@@ -153,24 +154,26 @@
         background-color: black;
         border-radius: 100vh;
       }
-      
-       @keyframes spin {
-      from {
-        transform: rotate(0deg);
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
       }
-      to {
-        transform: rotate(360deg);
-         }}
-      
+
       .drawing .dot {
-      position: absolute;
-      top: 20%;
-      left: 70%;
-      width: 8px;
-      height: 8px;
-      background-color: white;
-      border-radius: 50%;
-    }
+        position: absolute;
+        top: 20%;
+        left: 70%;
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50%;
+      }
 
       .drawing .hole {
         position: absolute;
@@ -204,24 +207,47 @@
         transform-origin: top;
         transition: transform 0.5s ease-in-out;
       }
-      
-      
+
+
       .drawing .play {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      padding: 10px 15px;
-      font-size: 16px;
-      cursor: pointer;
-      background: black;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-    
-      /* footer */
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
       
-      .footer {       
+      
+       .grid {
+        display: grid;
+        grid-template-columns: 30vh 30vh 30vh;
+        grid-gap: 5vh;
+        place-items: center;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid red;
+        margin: auto;
+      }
+      
+      .grid .episode{
+        height: 300px;
+        width: 300px;
+        margin: 2vh;
+      }
+      
+      .grid .episode .title{
+        font-size: 100%;
+      }
+      
+
+      /* footer */
+
+      .footer {
         position: relative;
         display: flex;
         justify-content: space-around;
@@ -233,30 +259,30 @@
         background-color: black;
         color: white;
       }
-      
-      .footer .left-links{
+
+      .footer .left-links {
         position: absolute;
         min-width: 200px;
         width: 30%;
         height: 100%;
-/*         border: 2px solid red; */
+        /*         border: 2px solid red; */
         padding: 2vh;
         left: 8%;
         font-size: 24px;
         font-weight: bold;
       }
-      
-       .footer .right-links{
+
+      .footer .right-links {
         position: absolute;
         padding: 2vh;
         left: 75%;
         min-width: 200px;
         width: 30%;
         height: 100%;
-/*         border: 2px solid red; */
+        /*         border: 2px solid red; */
       }
-      
-        .footer .centerbox{
+
+      .footer .centerbox {
         padding: 1vh;
         position: absolute;
         top: 2vh;
@@ -266,100 +292,142 @@
         width: 25%;
         min-width: 250px;
         height: 90%;
-/*         border: 2px solid red; */
+        /*         border: 2px solid red; */
       }
-      
-      
     </style>
   </head>
   <body>
     <div class="header">
       <div class="left-links">
-            <div>Who's On?</div>
+        <div>Who's On?</div>
       </div>
       <div class="right-links">
         <div>Archive</div>
-      <div>Directory</div>
+        <div>Directory</div>
       </div>
     </div>
-    
-    
+
+
     <div class="container">
-       <div class="episode">
-      <div class="showimage"><img src="newprind.jpeg" alt="Matteo and Kai">
-      </div>
-      <div class="title">
-        Episode 1. (P)rind with Kai and Matteo
-      </div>
-          <div class="description">
-      Kai and Matteo talk about building (P)rind, a parmesan puff snack made from the rinds of authentic Italian Parmigiano.
-      </div>
-      <div class="tagbox">
-        CPG
+
+      <div class="episode">
+        <div class="showimage"><img src="newprind.jpeg" alt="Matteo and Kai">
+        </div>
+        <div class="title">
+          Episode 1. (P)rind with Kai and Matteo
+        </div>
+        <div class="description">
+          Kai and Matteo talk about building (P)rind, a parmesan puff snack made from the rinds of authentic Italian Parmigiano.
+        </div>
+        <div class="tagbox">
+          CPG
+        </div>
       </div>
 
-    </div>
 
-
-    <div class="drawing">
-      <div class="turntable">
-        <div class="dot"></div>
-        <div class="hole"> </div>
+      <div class="drawing">
+        <div class="turntable">
+          <div class="dot"></div>
+          <div class="hole"> </div>
+        </div>
+        <div class="arm"> </div>
+        <div class="lever"> </div>
+        <button class="play">Play</button>
       </div>
-      <div class="arm"> </div>
-      <div class="lever"> </div>
-      <button class="play">Play</button>
-    </div>
-      
+
       <audio id="record-audio" loop>
-      <source src="hohey.mp3" type="audio/mpeg">
+        <source src="hohey.mp3" type="audio/mpeg">
       </audio>
-      
+
     </div>
-    
-    
-    
+
+    <div class="container">
+      <div class="grid">
+        <div class="episode">
+        <div class="showimage"><img src="newprind.jpeg" alt="Matteo and Kai">
+        </div>
+        <div class="title">
+          Episode 1. (P)rind with Kai and Matteo
+        </div>
+
+        <div class="tagbox">
+          CPG
+        </div>
+      </div>
+        <div class="episode">
+        <div class="showimage"><img src="newprind.jpeg" alt="Matteo and Kai">
+        </div>
+        <div class="title">
+          Episode 1. (P)rind with Kai and Matteo
+        </div>
+        <div class="tagbox">
+          CPG
+        </div>
+      </div>
+        <div class="episode">
+        <div class="showimage"><img src="newprind.jpeg" alt="Matteo and Kai">
+        </div>
+        <div class="title">
+          Episode 1. (P)rind with Kai and Matteo
+        </div>
+        <div class="tagbox">
+          CPG
+        </div>
+      </div>
+        <div class="episode">
+        <div class="showimage"><img src="newprind.jpeg" alt="Matteo and Kai">
+        </div>
+        <div class="title">
+          Episode 1. (P)rind with Kai and Matteo
+        </div>
+        <div class="tagbox">
+          CPG
+        </div>
+      </div>
+      </div>
+    </div>
+
     <div class="footer">
       <div class="left-links">
-     <div> Instagram </div>
-      <div> Youtube </div>
-      <div> Spotify </div>
-       <div> WHPK </div>
+        <div> Instagram </div>
+        <div> Youtube </div>
+        <div> Spotify </div>
+        <div> WHPK </div>
       </div>
       <div class="centerbox"> *This website is a current work in progress. The audio player plays The Lumineers' Ho Hey.</div>
-      <div class="right-links"> 
-      Contact information:
+      <div class="right-links">
+        Contact information:
         <div>
           Phone: (774) 312-3627
         </div>
-          <div>
-          Email: tchan0@uchicago.edu 
+        <div>
+          Email: tchan0@uchicago.edu
         </div>
       </div>
     </div>
   </body>
-  
-    <script>
+
+  <script>
     const turntable = document.querySelector(".turntable");
     const play = document.querySelector(".play");
     const lever = document.querySelector(".lever");
     const audio = document.getElementById("record-audio");
     let spinning = true;
-    
+
     play.addEventListener("click", () => {
       if (spinning) {
-        turntable.style.animation = "none"; 
-        lever.style.transform = "rotate(0deg)"; 
+        turntable.style.animation = "none";
+        lever.style.transform = "rotate(0deg)";
         audio.pause();
         play.textContent = "Play";
       } else {
-        turntable.style.animation = "spin 3s linear infinite"; 
-        lever.style.transform = "rotate(10deg)"; 
+        turntable.style.animation = "spin 3s linear infinite";
+        lever.style.transform = "rotate(10deg)";
         audio.play();
         play.textContent = "Pause";
       }
       spinning = !spinning;
     });
   </script>
-  
+
 </html>
