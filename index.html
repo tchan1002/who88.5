@@ -9,9 +9,6 @@
         font-family: Arial, sans-serif;
         background-color: white;
         color: black;
-        display: flex;
-        justify-content: center;
-        align-items: space-between;
         height: 100vh;
         width: 100vw;
         margin: 0;
@@ -19,7 +16,7 @@
 
 /* Header */
       .header {
-        position: fixed;
+        position: relative;
         height: 4vh;
         width: 100vw;
         min-width: 800px;
@@ -60,6 +57,16 @@
 /*         border: 2px solid red; */
       }
 
+      .container {
+        position: relative;
+        width: 100vw;
+        height: 800px;
+        border: 2px solid red;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+      }
+      
 /* episode card */
       .episode {
         position: relative;
@@ -129,7 +136,6 @@
       
       .drawing {
         position: relative;
-        margin: 15vh 5vh;
         width: 500px;
         height: 500px;
         min-width: 500px;
@@ -216,7 +222,7 @@
       /* footer */
       
       .footer {       
-        position: fixed;
+        position: relative;
         display: flex;
         justify-content: space-around;
         width: 100vw;
@@ -278,8 +284,8 @@
     </div>
     
     
-    
-    <div class="episode">
+    <div class="container">
+       <div class="episode">
       <div class="showimage"><img src="newprind.jpeg" alt="Matteo and Kai">
       </div>
       <div class="title">
@@ -304,10 +310,13 @@
       <div class="lever"> </div>
       <button class="play">Play</button>
     </div>
-
-<audio id="record-audio" loop>
-  <source src="hohey.mp3" type="audio/mpeg">
-</audio>
+      
+      <audio id="record-audio" loop>
+      <source src="hohey.mp3" type="audio/mpeg">
+      </audio>
+      
+    </div>
+    
     
     
     <div class="footer">
